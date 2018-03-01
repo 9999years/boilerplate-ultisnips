@@ -61,6 +61,7 @@ for `Foo.java` and something like
     import org.junit.jupiter.api.Test;
 
     public class FooTest {
+
     }
 
 for `FooTest.java`.
