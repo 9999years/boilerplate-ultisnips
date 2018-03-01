@@ -1,4 +1,4 @@
-g:ultisnips_boilerplate_skel_trigger = '_skel'
+let g:ultisnips_boilerplate_skel_trigger = '_skel'
 
 " attempt to insert the mapping `skell`, reverting if unsuccesful
 function! s:try_insert(skel)
@@ -25,5 +25,5 @@ function! snippet#InsertSkeletonIfEmpty() abort
     return
   endif
 
-  snippet#InsertSkeleton()
+  call snippet#InsertSkeleton()
 endfunction
