@@ -1,4 +1,4 @@
-let g:ultisnips_boilerplate_skel_trigger = '_skel'
+let g:boilerplate_ultisnips_skel_trigger = '_skel'
 
 " attempt to insert the mapping `skell`, reverting if unsuccesful
 function! s:try_insert(skel)
@@ -12,12 +12,12 @@ function! s:try_insert(skel)
 endfunction
 
 " unconditionally insert the skeleton
-function! snippet#InsertSkeleton() abort
-  call s:try_insert(g:ultisnips_boilerplate_skel_trigger)
+function! boilerplate_ultisnips#InsertSkeleton() abort
+  call s:try_insert(g:boilerplate_ultisnips_skel_trigger)
 endfunction
 
 " insert the skeleton IFF the buffer is empty
-function! snippet#InsertSkeletonIfEmpty() abort
+function! boilerplate_ultisnips#InsertSkeletonIfEmpty() abort
   let filename = expand('%')
 
   " Abort on non-empty buffer or extant file
@@ -25,5 +25,5 @@ function! snippet#InsertSkeletonIfEmpty() abort
     return
   endif
 
-  call snippet#InsertSkeleton()
+  call boilerplate_ultisnips#InsertSkeleton()
 endfunction

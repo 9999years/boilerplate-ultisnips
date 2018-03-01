@@ -1,9 +1,10 @@
 " only operate if ultisnips is loaded
 if !exists('g:did_plugin_ultisnips') | finish | endif
-if exists('g:did_ultisnips_skeleton_plugin')   | finish | endif
-let g:did_ultisnips_skeleton_plugin = 1
+if exists('g:did_boilerplate_ultisnips_plugin')   | finish | endif
+let g:did_boilerplate_ultisnips_plugin = 1
 
 augroup ultisnips_custom
   autocmd!
-  autocmd BufNewFile * silent! call snippet#InsertSkeletonIfEmpty()
+  " insert the snippet if we open a new empty file
+  autocmd BufNewFile * silent! call boilerplate_ultisnips#InsertSkeletonIfEmpty()
 augroup END
